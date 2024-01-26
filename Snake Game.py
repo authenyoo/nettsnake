@@ -1,5 +1,5 @@
 """
-Snake Eater
+nettsnake!! bitch
 Made with PyGame
 """
 
@@ -26,11 +26,11 @@ if check_errors[1] > 0:
     print(f'[!] Had {check_errors[1]} errors when initialising game, exiting...')
     sys.exit(-1)
 else:
-    print('[+] Game successfully initialised')
+    print('[+] Game successfully initialised! drank drank')
 
 
 # Initialise game window
-pygame.display.set_caption('Snake Eater')
+pygame.display.set_caption('nettsnake')
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
 
@@ -59,18 +59,18 @@ change_to = direction
 score = 0
 
 # load nettspend yeah awesome!!
-nettspend_img = pygame.image.load("nettspend.png")
-nettspend_img = pygame.transform.scale(nettspend_img, (100, 60))  # change that size yea
+nettspend_image = pygame.image.load("nettspend.png")
+nettspend_image = pygame.transform.scale(nettspend_image, (100, 60))  # change that size yea
 
 # im loading the drank im sipping drankdrankdrank
-drank_img = pygame.image.load("drank.png")
-drank_img = pygame.transform.scale(drank_img, (40, 40))  # change the size again
+drank_image = pygame.image.load("drank.png")
+drank_image = pygame.transform.scale(drank_image, (40, 40))  # change the size again
 
 
 # Game Over
 def game_over():
-    my_font = pygame.font.SysFont('times new roman', 90)
-    game_over_surface = my_font.render('YOU DIED', True, red)
+    my_font = pygame.font.SysFont('times new roman', 20)
+    game_over_surface = my_font.render('you died!! not so drankdrankdrank of you. we not like you', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)
@@ -151,10 +151,11 @@ while True:
 
     # GFX
     game_window.fill(black)
+    # draw fun ny netts spend
     for pos in snake_body:
-        game_window.blit(nettspend_img, (pos[0], pos[1]))
+        game_window.blit(nettspend_image, (pos[0], pos[1]))
     # draw the drank
-    game_window.blit(drank_img, (food_pos[0], food_pos[1]))
+    game_window.blit(drank_image, (food_pos[0], food_pos[1]))
 
 
     # Game Over conditions
