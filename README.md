@@ -22,3 +22,5 @@ touch the apple and big money
 when you eat the apple the score updates
 - **theres picture of nettspend and lean drank drank drank**\
 theres a stock picture of lean and nettspend from the snippet you know it
+
+also the collision sucks if youre smarter tjhan me fix thast please
