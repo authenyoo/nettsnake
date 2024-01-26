@@ -58,6 +58,14 @@ change_to = direction
 
 score = 0
 
+# load nettspend yeah awesome!!
+nettspend_img = pygame.image.load("nettspend.png")
+nettspend_img = pygame.transform.scale(nettspend_img, (100, 60))  # change that size yea
+
+# im loading the drank im sipping drankdrankdrank
+drank_img = pygame.image.load("drank.png")
+drank_img = pygame.transform.scale(drank_img, (40, 40))  # change the size again
+
 
 # Game Over
 def game_over():
@@ -144,13 +152,10 @@ while True:
     # GFX
     game_window.fill(black)
     for pos in snake_body:
-        # Snake body
-        # .draw.rect(play_surface, color, xy-coordinate)
-        # xy-coordinate -> .Rect(x, y, size_x, size_y)
-        pygame.draw.rect(game_window, green, pygame.Rect(pos[0], pos[1], 10, 10))
+        game_window.blit(nettspend_img, (pos[0], pos[1]))
+    # draw the drank
+    game_window.blit(drank_img, (food_pos[0], food_pos[1]))
 
-    # Snake food
-    pygame.draw.rect(game_window, white, pygame.Rect(food_pos[0], food_pos[1], 10, 10))
 
     # Game Over conditions
     # Getting out of bounds
