@@ -3,7 +3,10 @@ nettsnake!! bitch
 Made with PyGame
 """
 
-import pygame, sys, time, random
+import pygame, sys, time, random, os
+# this library name is so fucking stupid okay PLAYSOUND . fucking dumbass. i hate you
+
+from playsound import playsound
 
 
 # Difficulty settings
@@ -45,7 +48,6 @@ blue = pygame.Color(0, 0, 255)
 # FPS (frames per second) controller
 fps_controller = pygame.time.Clock()
 
-
 # Game variables
 snake_pos = [100, 50]
 snake_body = [[100, 50], [100-10, 50], [100-(2*10), 50]]
@@ -66,11 +68,20 @@ nettspend_image = pygame.transform.scale(nettspend_image, (100, 60))  # change t
 drank_image = pygame.image.load("drank.png")
 drank_image = pygame.transform.scale(drank_image, (40, 40))  # change the size again
 
+# this uhh it plays the  fucking backgroudn music  thank you
+def play_audio(filepath):
+    pygame.mixer.init()
+    pygame.mixer.music.load(filepath)
+    pygame.mixer.music.play()
+
+if __name__ == "__main__":
+    audio_file = "drankdrankdrank.mp3"
+    play_audio(audio_file)
 
 # Game Over
 def game_over():
-    my_font = pygame.font.SysFont('times new roman', 20)
-    game_over_surface = my_font.render('you died!! not so drankdrankdrank of you. we not like you', True, red)
+    my_font = pygame.font.SysFont('comic sans ms', 20)
+    game_over_surface = my_font.render('you died!! not so drankdrankdrank of you. we not like you', True, red) # fuckin idk man  
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)
@@ -80,7 +91,6 @@ def game_over():
     time.sleep(3)
     pygame.quit()
     sys.exit()
-
 
 # Score
 def show_score(choice, color, font, size):
