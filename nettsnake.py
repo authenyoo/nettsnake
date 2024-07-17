@@ -64,16 +64,6 @@ nettspend_image = pygame.transform.scale(nettspend_image, (100, 60))  # change t
 drank_image = pygame.image.load("drank.png")
 drank_image = pygame.transform.scale(drank_image, (40, 40))  # change the size again
 
-# this uhh it plays the  fucking backgroudn music  thank you
-def play_audio(filepath):
-    pygame.mixer.init()
-    pygame.mixer.music.load(filepath)
-    pygame.mixer.music.play()
-
-if __name__ == "__main__":
-    audio_file = "drankdrankdrank.mp3"
-    play_audio(audio_file)
-
 # Game Over
 def game_over():
     my_font = pygame.font.SysFont('comic sans ms', 20)
