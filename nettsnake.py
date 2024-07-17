@@ -4,10 +4,6 @@ Made with PyGame
 """
 
 import pygame, sys, time, random, os
-# this library name is so fucking stupid okay PLAYSOUND . fucking dumbass. i hate you
-
-from playsound import playsound
-
 
 # Difficulty settings
 # Easy      ->  10
