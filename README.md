@@ -15,7 +15,7 @@ thaats it
 <img src="https://raw.githubusercontent.com/authenyoo/nettsnake/master/nettspend.png" align="right" height="320px"/>
 
 - **you can move**\
-yeah you use the arrow keys and stuff
+yeah you use the arrow keys and stuff and wasd
 - **you can eat the apple**\
 touch the apple and big money
 - **you can get scores**\
